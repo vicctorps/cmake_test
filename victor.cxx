@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 
+#include <Myclass.h>
 #include <TApplication.h>
 #include <TCanvas.h>
 #include <TF1.h>
@@ -60,6 +61,9 @@ int main(int argc, char *argv[]) {
     p->cd(3);
     h1->Draw();
     h2->Draw("same");
+    Myclass *d = new Myclass();
+    d->SetDummyValue(3);
+    d->Dump();
     theApp.Run();
     return 0;
 }
